@@ -36,11 +36,13 @@ function handleInputEl(event) {
 
             const markup = data.map(
                 (country) => {
-                  return  `<img class="flag" src="${country.flags.svg}" alt="" />
+                    return `<div class="flex">
+                  <img class="flag" src="${country.flags.svg}" alt="" />
           <p class="country-name">${country.name.official}</p>
-          <p class="capital">${country.capital}</p>
-          <p class="population">${country.population}</p>
-          <p class="languages">${Object.values(country.languages)}</p>`
+          </div>
+          <p class="capital"><span class="span">Capital:</span> ${country.capital}</p>
+          <p class="population"><span class="span">Population:</span> ${country.population}</p>
+          <p class="languages"><span class="span">Languages:</span> ${Object.values(country.languages)}</p>`
                 })
                 .join('')
             countryInfo.innerHTML = markup;
@@ -49,9 +51,11 @@ function handleInputEl(event) {
             } else if (data.length >= 2 && data.length < 10) {
                 const markup = data.map(
                     (country) => {
-                   return `<li>
+                        return `<li class="list">
+                   <div class="flex">
           <img class="flag" src="${country.flags.svg}" alt="" />
           <p class="country-name">${country.name.official}</p> 
+          </div>
                     </li>`
                 })
                 .join('')
