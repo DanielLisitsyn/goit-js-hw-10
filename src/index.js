@@ -27,7 +27,7 @@ function handleInputEl(event) {
         })
         .then(data => { 
             if (data.length === 1) {
-
+console.log(data)
             const markup = data.map(
                 (country) => {
                     return `<div class="flex">
