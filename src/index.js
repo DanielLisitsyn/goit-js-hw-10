@@ -42,7 +42,7 @@ function handleInputEl(event) {
           </div>
           <p class="capital"><span class="span">Capital:</span> ${country.capital}</p>
           <p class="population"><span class="span">Population:</span> ${country.population}</p>
-          <p class="languages"><span class="span">Languages:</span> ${Object.values(country.languages)}</p>`
+          <p class="languages"><span class="span">Languages:</span> ${Object.values(country.languages).join(', ')}</p>`
                 })
                 .join('')
             countryInfo.innerHTML = markup;
