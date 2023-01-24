@@ -31,7 +31,7 @@ function handleInputEl(event) {
             }
             return response.json();
         })
-        .then(data => { console.log(data)
+        .then(data => { 
             if (data.length === 1) {
 
             const markup = data.map(
