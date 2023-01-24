@@ -71,7 +71,10 @@ console.log(data)
         }
             
         })
-        .catch(error => console.log(error))
+        .catch(error => {
+            countryInfo.innerHTML = '';
+            countryList.innerHTML = '';
+        })
     
 }
 
